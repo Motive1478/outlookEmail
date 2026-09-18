@@ -4,8 +4,7 @@ services:
 
     name: outlookemail
 
-    env: docker
-
+    runtime: docker
 
     plan: free
 
@@ -18,6 +17,7 @@ services:
 
     envVars:
 
+
       - key: PORT
         value: 8080
 
@@ -28,12 +28,3 @@ services:
 
       - key: SECRET_KEY
         generateValue: true
-
-
-    disk:
-
-      name: outlook-data
-
-      mountPath: /app/data
-
-      sizeGB: 1
