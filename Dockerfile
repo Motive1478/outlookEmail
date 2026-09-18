@@ -6,8 +6,6 @@ COPY . .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN chmod +x start.sh
-
 EXPOSE 8080
 
-CMD ["./start.sh"]
+CMD ["bash","start.sh"]
